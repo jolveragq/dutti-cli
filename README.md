@@ -16,11 +16,11 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g dutti-cli
+$ npm install -g dutti-cli-jolveragq
 $ dutti-cli COMMAND
 running command...
 $ dutti-cli (--version)
-dutti-cli/0.0.0 darwin-x64 node-v14.20.1
+dutti-cli-jolveragq/0.0.1 darwin-x64 node-v14.20.1
 $ dutti-cli --help [COMMAND]
 USAGE
   $ dutti-cli COMMAND
@@ -29,8 +29,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`dutti-cli hello PERSON`](#dutti-cli-hello-person)
-* [`dutti-cli hello world`](#dutti-cli-hello-world)
+* [`dutti-cli create-branch`](#dutti-cli-create-branch)
 * [`dutti-cli help [COMMAND]`](#dutti-cli-help-command)
 * [`dutti-cli plugins`](#dutti-cli-plugins)
 * [`dutti-cli plugins:install PLUGIN...`](#dutti-cli-pluginsinstall-plugin)
@@ -42,45 +41,14 @@ USAGE
 * [`dutti-cli plugins:uninstall PLUGIN...`](#dutti-cli-pluginsuninstall-plugin-2)
 * [`dutti-cli plugins update`](#dutti-cli-plugins-update)
 
-## `dutti-cli hello PERSON`
-
-Say hello
+## `dutti-cli create-branch`
 
 ```
 USAGE
-  $ dutti-cli hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ dutti-cli create-branch
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/jolveragq/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `dutti-cli hello world`
-
-Say hello world
-
-```
-USAGE
-  $ dutti-cli hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ dutti-cli hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+_See code: [dist/commands/create-branch.ts](https://github.com/jolveragq/hello-world/blob/v0.0.1/dist/commands/create-branch.ts)_
 
 ## `dutti-cli help [COMMAND]`
 
