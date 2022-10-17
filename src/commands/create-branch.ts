@@ -147,7 +147,10 @@ export default class CreateBranch extends Command {
   }
 
   private async getDescription() {
-    this.labelBranchDescription = await CliUx.ux.prompt(`the branch description (max: ${this.MAX_DESC_LENGH} characters):`, {required: false})
+
+    const isRequired = this.typeLabel === 'NO-TASK'
+
+    this.labelBranchDescription = await CliUx.ux.prompt(`the branch description (max: ${this.MAX_DESC_LENGH} characters):`, {required: isRequired})
     this.labelBranchDescription = this.parseDescription(this.labelBranchDescription)
     this.log(this.labelBranchDescription)
   }
