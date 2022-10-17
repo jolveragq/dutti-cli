@@ -64,6 +64,8 @@ export default class CreateBranch extends Command {
       await this.getTypeLabel()
       if (this.typeLabel === 'JIRA') {
         await this.getJiraLabel()
+      } else {
+        this.labelDescription = 'NO-TASK'
       }
     }
 
@@ -147,7 +149,6 @@ export default class CreateBranch extends Command {
   }
 
   private async getDescription() {
-
     const isRequired = this.typeLabel === 'NO-TASK'
 
     this.labelBranchDescription = await CliUx.ux.prompt(`the branch description (max: ${this.MAX_DESC_LENGH} characters):`, {required: isRequired})
