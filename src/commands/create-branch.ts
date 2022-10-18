@@ -115,13 +115,16 @@ export default class CreateBranch extends Command {
   private async getJiraLabel() {
     this.labelDescription = await CliUx.ux.prompt(`JIRA code to implement i.e.:
           - ECOMDUTI-12345
+          - 12345
     `)
     this.labelDescription = this.labelDescription?.toUpperCase()
     this.log(this.labelDescription)
 
-    const regDescription = /^ECOMDUTI-\d{5,}/
+    const regDescription = /^ECOMDUTI-\d{5,}|^\d{5,}/
     if (!regDescription.test(<string> this.labelDescription)) {
       this.error(new Error('INVALID ARGUMENTS'))
+    } else if (!Number.isNaN(Number.parseInt(this.labelDescription ?? '', 10))) {
+      this.labelDescription = 'ECOMDUTI-' + this.labelDescription
     }
   }
 
