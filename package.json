@@ -23,7 +23,7 @@
     "inquirer": "^6.2.2"
   },
   "devDependencies": {
-    "@oclif/test": "^2.2.3",
+    "@oclif/test": "^2.3.3",
     "@types/chai": "^4",
     "@types/node": "^16.11.65",
     "chai": "^4",
